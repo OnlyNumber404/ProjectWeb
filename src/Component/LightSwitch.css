@@ -1,0 +1,56 @@
+/* common code */
+.toggle-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.toggle-switch {
+  width: 60px;
+  height: 28px;
+  background: black;
+  border-radius: 20px;
+  position: relative;
+  cursor: pointer;
+  transition: 0.3s ease;
+  border: 2px solid #000;
+}
+
+.toggle-switch.active {
+  background: white;
+}
+
+.toggle-slider {
+  width: 24px;
+  height: 24px;
+  background: white;
+  border-radius: 50%;
+  position: absolute;
+  top: 50%;
+  transform: translate(1px, -50%);
+  transition: transform 0.3s ease;
+}
+
+.toggle-switch.active .toggle-slider {
+  transform: translate(32px, -52%);
+  background-color: oklch(68.1% 0.162 75.834);
+}
+
+.toggle-icon {
+  position: absolute;
+  font-size: 12px;
+  left: 3px;
+  top: 3px;
+}
+
+/* dark light mode */
+
+.light-mode {
+  background: rgba(250,250,250, 1);
+  color: black;
+}
+
+.dark-mode {
+  background: #111;
+  color: white;
+}

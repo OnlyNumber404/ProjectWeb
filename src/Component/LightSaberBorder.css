@@ -1,0 +1,35 @@
+.lightsaber-border {
+  position: relative;
+  overflow: hidden;
+}
+
+.lightsaber-border::before {
+  content: "";
+  position: absolute;
+  top: -200%;
+  left: -200%;
+  width: 400%;
+  height: 400%;
+  background: conic-gradient(
+    rgba(255, 255, 255, 0) 0deg,
+    rgba(255, 255, 255, 0.9) 90deg,
+    rgba(255, 255, 255, 0) 180deg,
+    rgba(255, 255, 255, 0.9) 270deg,
+    rgba(255, 255, 255, 0) 360deg
+  );
+  animation: rotateLight 4s linear infinite;
+  filter: blur(8px) drop-shadow(0 0 12px white);
+}
+
+@keyframes rotateLight {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+/* Border tipis agar kelihatan tegas */
+.lightsaber-border-inner {
+  position: relative;
+  border: 2px solid rgba(255, 255, 255, 0.4);
+  border-radius: 12px;
+  z-index: 2;
+}
